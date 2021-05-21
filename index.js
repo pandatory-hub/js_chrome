@@ -1,9 +1,33 @@
-<<<<<<< HEAD
-function sayHello(name, age) {
-  console.log('Hello!', name, "you have", age, 'years of age.');
+const calculator = {
+  plus: function(a, b) {
+    return a + b;
+  },
+
+  minus: function(a, b) {
+    return a - b;
+  },
+
+  multi: function(a, b) {
+    return a * b;
+  },
+
+  divi: function(a, b) {
+    return a / b;
+  }, 
+
+  remain: function(a, b) {
+    return a % b;
+  }
 }
 
-sayHello("JiSoo :)", 24);
-=======
-alert('Im Working. Im JS.');
->>>>>>> 4bc64a183f6928298ae18bcef3b929b093676a3b
+const pplus = calculator.plus(5, 5);
+const mminus = calculator.minus(5, 2);
+const mmulti = calculator.multi(5, 2);
+const ddivi = calculator.divi(6, 2);
+const rremain = calculator.remain(5, 2);
+
+console.log(pplus);
+console.log(mminus);
+console.log(mmulti);
+console.log(ddivi);
+console.log(rremain);
