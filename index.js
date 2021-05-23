@@ -1,22 +1,14 @@
 const title = document.querySelector("#title");
 
-const BASE_COLOR = "white";
-const OTHER_COLOR = "#FC427B";
+const CLICKED_CLASS = "clicked";
 
 function handleClick() {
-  const currentColor = title.style.color;
-  if(currentColor === BASE_COLOR) {
-    title.style.color = OTHER_COLOR;
-  } else {
-    title.style.color = BASE_COLOR;
-  }
-
+  title.classList.toggle(CLICKED_CLASS);
 }
 
 function init() {
-  title.style.color = BASE_COLOR;
+  title.addEventListener("click", handleClick);
 }
-title.addEventListener("click", handleClick);
 
 init();
 
