@@ -1,27 +1,19 @@
 body {
   background-color: #293138;
-}
-
-.btn {
-  cursor: pointer;
-}
-
-body {
   color: #ffffffef;
   text-shadow: 2px 2px 5px #293138;
 }
 
-.clicked {
-  color: #fd79a8;
-}
-
-.form,
-.greetings {
-  display: none;
+.form {
+  opacity: 0;
+  transition: 0.5s;
+  height: 0;
 }
 
 .showing {
-  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  height: auto;
 }
 
 @keyframes fadeIn {
@@ -38,9 +30,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-width: 1000px;
+  min-height: 100%;
   z-index: -1;
-  animation: fadeIn 2.5s linear;
+  animation: fadeIn 0.5s linear;
+  filter: brightness(70%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
 }
 
 .js-clock {
